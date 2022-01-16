@@ -23,7 +23,7 @@ function Layout() {
           <Switch>
 
             <Route exact={true} path="/">
-              <Home decks={decks} setDecks={setDecks}/>
+              <Home decks={decks} setDecks={setDecks} />
             </Route>
 
             <Route exact path="/decks/new">
@@ -31,11 +31,11 @@ function Layout() {
             </Route>
 
             <Route exact path="/decks/:deckId">
-              <Deck decks={decks} setDecks={setDecks}/>
+              <Deck/>
             </Route>            
 
             <Route exact path="/decks/:deckId/edit">
-              <EditDeck decks={decks} setDecks={setDecks}/>
+              <EditDeck/>
             </Route>
 
             <Route exact path="/decks/:deckId/study">

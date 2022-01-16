@@ -17,7 +17,7 @@ function Study() {
   useEffect(() => {
     readDeck(deckId)
     .then((response) => setDeck({cards: response.cards, name: response.name}));
-  }, [activeCard]);
+  }, [activeCard,deckId]);
 
   if(deck.cards.length <= 2 || deck.cards.length === 0){
     return (

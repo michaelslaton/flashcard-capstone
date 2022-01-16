@@ -14,7 +14,7 @@ export default function AddCard() {
     readDeck(deckId).then((response) => {
       setDeck({ name: response.name, id: response.id });
     });
-  }, []);
+  }, [deckId]);
 
   function handleChange({ target }) {
     setFormData({

@@ -1,12 +1,13 @@
 import { listDecks } from "../../utils/api";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import DeleteDeckButton from "../DeleteDeckButton";
 import { Link } from "react-router-dom";
 
 function DeckList({ decks, setDecks }) {
+  
   useEffect(() => {
     listDecks().then(setDecks);
-  }, []);
+  }, [setDecks]);
   
   if(decks.length === 0){
     return <p>loading...</p>

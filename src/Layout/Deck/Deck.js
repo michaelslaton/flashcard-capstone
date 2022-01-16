@@ -18,7 +18,7 @@ export default function Deck() {
         description: response.description,
       })
     );
-  }, []);
+  }, [deckId]);
 
   const cardList = deck.cards.map((card, index) => {
     return (

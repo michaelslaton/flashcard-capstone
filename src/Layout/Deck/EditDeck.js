@@ -5,7 +5,7 @@ import { updateDeck } from "../../utils/api";
 import { readDeck } from "../../utils/api";
 import DeckForm from "./DeckForm";
 
-export default function EditDeck({ decks, setDecks }) {
+export default function EditDeck() {
   const history = useHistory();
   const initialFormState = { cards: [], name: ``, description: `` };
   const [formData, setFormData] = useState({ ...initialFormState });
@@ -20,7 +20,7 @@ export default function EditDeck({ decks, setDecks }) {
         description: response.description,
       });
     });
-  }, []);
+  }, [deckId]);
 
   function handleChange({ target }) {
     setFormData({
